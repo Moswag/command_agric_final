@@ -1,22 +1,24 @@
 package zw.co.cytex.command_agriculture.command_agriculture.model;
 
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * @author : Webster Moswa
+ * @since : 16/01/2020, Thu
+ * email: webstermoswa11@gmail.com
+ * mobile: 0771407147
+ **/
+
 @Data
 @Entity
 @NoArgsConstructor
-@Table(name = "admin")
-public class Admin {
+@Table(name = "soil_type")
+public class Soil {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String username;
     private String name;
-    private String surname;
-    private String nationalId;
-    private String address;
 }

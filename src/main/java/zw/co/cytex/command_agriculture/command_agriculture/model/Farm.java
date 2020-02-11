@@ -5,19 +5,23 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * @author : Webster Moswa
+ * @since : 09/02/2020, Sun
+ * email: webstermoswa11@gmail.com
+ * mobile: 0771407147
+ **/
+
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "farmers")
-public class Farmer {
+@Table(name = "farm")
+public class Farm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String surname;
-    private String nationalId;
-    private String phonenumber;
-    private String address;
     private Long farmId;
-
+    private Long districtId;
+    private double hectares;
+    private String status;
 }
