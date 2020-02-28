@@ -15,6 +15,7 @@ public class Farmer {
     private Long id;
     private String name;
     private String surname;
+    private String email;
     private String nationalId;
     private String phonenumber;
     private String address;

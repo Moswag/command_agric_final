@@ -15,4 +15,10 @@ public class Constants {
     public static final String HEADER_STRING = "Authorization";
 
     public static final String STATUS_ACTIVE="Active";
+
+    public static final String ACCESS_ADMIN="Admin";
+    public static final String ACCESS_FARMER="Farmer";
+
+    public static final String STATUS_PENDING="Pending";
+    public static final String STATUS_GIVEN="Given";
 }

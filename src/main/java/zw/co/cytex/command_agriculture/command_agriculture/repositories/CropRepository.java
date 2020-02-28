@@ -14,7 +14,7 @@ import java.util.Optional;
 
 
 public interface CropRepository extends JpaRepository<Crop, Long> {
-    Crop findByName(String name);
+    Optional<Crop> findByName(String name);
     Optional<Crop> findById(Long id);
     Boolean existsByName(String name);
 }

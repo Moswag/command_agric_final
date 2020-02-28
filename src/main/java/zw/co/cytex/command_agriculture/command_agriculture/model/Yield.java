@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -17,6 +18,7 @@ public class Yield {
     private Long id;
     private Long farmerId;
     private double yield;
-    private String cropType;
+    private Long cropType;
+    private Date date;
 
 }

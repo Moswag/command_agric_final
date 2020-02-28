@@ -37,7 +37,10 @@ public class InputController {
     @PostMapping
     public ApiResponse<Input> saveInput(@RequestBody Input input){
         if(inputsRepository.existsByCropId(input.getCropId())){
-            return new ApiResponse<>(HttpStatus.BAD_REQUEST.value(),"Input already exists",null);
+            Optional<Input> optionalInput=inputsRepository.findByCropId(input.getCropId());
+            double quantity=optionalInput.get().getQuantity();
+            optionalInput.get().setQuantity(quantity+input.getQuantity());
+            return new ApiResponse<>(HttpStatus.OK.value(),"Input successfully updated",inputsRepository.save(optionalInput.get()));
         }
         else{
             if(cropRepository.existsById(input.getCropId())){

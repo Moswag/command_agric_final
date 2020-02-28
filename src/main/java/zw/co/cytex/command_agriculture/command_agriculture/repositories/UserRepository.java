@@ -13,4 +13,5 @@ import zw.co.cytex.command_agriculture.command_agriculture.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
+    boolean existsByUsername(String username);
 }

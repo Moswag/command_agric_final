@@ -4,22 +4,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * @author : Webster Moswa
- * @since : 10/02/2020, Mon
+ * @since : 15/02/2020, Sat
  * email: webstermoswa11@gmail.com
  * mobile: 0771407147
  **/
 
 @Data
-@Entity
 @NoArgsConstructor
-@Table(name = "gmb")
-public class GMB {
+@Entity
+@Table(name = "distribution")
+public class Distribution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long cropId;
-    private double price;
+    private Long districtId;
+    private Date date;
+    private String status;
 }
+
